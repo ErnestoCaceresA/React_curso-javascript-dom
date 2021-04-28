@@ -1,0 +1,68 @@
+.Header img{
+	display: none;
+}
+.Header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.Header a {
+  border: 1px solid #5e5e55;
+  border-radius: 30px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  font-size: 15px;
+  margin: 4px 15px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .Header ul {
+    background: #444;
+    backdrop-filter: blur(4px);
+    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+
+    position: absolute;
+    right: 100vw;
+
+    transition: right 0.5s;
+  }
+
+  .Header .toggle-btn {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    z-index: 10;
+  }
+  .Header .toggle-btn span {
+    background-color: red;
+    width: 45px;
+    height: 4px;
+    background: #000;
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* icono de barras */
+  .Header img:first-child {
+display: inline-block;
+    width: 40px;
+    margin: 15px;
+  }
+  .Header img:nth-child(2){
+	  display: inline-block;
+	  position: absolute;
+	  width: 50px;
+	  margin: 15px 74vw;
+  }
+}
